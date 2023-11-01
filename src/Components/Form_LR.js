@@ -61,6 +61,8 @@ export default function Form_LR() {
             });
             localStorage.setItem("userName", resp.data.user.name);
             localStorage.setItem("userMail", resp.data.user.email);
+            localStorage.setItem("Userid", resp.data.user._id
+            );
 
             // Navigate to the home page after 2 seconds
             setTimeout(() => {
@@ -209,7 +211,7 @@ export default function Form_LR() {
 
         console.log("resp.data", response.data);
 
-        if (response.data.message === "SignUp successful") {
+        if (response.data.message === "User registered successfully" ) {
           // Display a success message using toast
           toast.success("Sign up successful", {
             position: toast.POSITION.TOP_RIGHT,
